@@ -2,7 +2,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 import http from 'http';
 import app from './app.js';
-import cors from 'cors';
+//import cors from 'cors';
 import connectDB from './config/db.js';
 import { ensureDefaultAdmin } from './utils/setupDefaultUser.js';
 import { initSocket } from './serverSocket.js';
@@ -18,10 +18,10 @@ const start = async () => {
     res.send('SkyCRM backend is running!');
   });
 
-  app.use(cors({
-  origin: ['https://crm-f-eight.vercel.app'], // replace with your actual Vercel URL
-  credentials: true
-}));
+//   app.use(cors({
+//   origin: ['https://crm-f-eight.vercel.app'], // replace with your actual Vercel URL
+//   credentials: true
+// }));
 
   const server = http.createServer(app);
 
