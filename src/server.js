@@ -25,7 +25,25 @@ const start = async () => {
 
   const server = http.createServer(app);
 
-  initSocket(server);
+  //initSocket(server);
+    const io = new Server(server, {
+    cors: {
+      origin: [
+        "http://localhost:5173",
+        "https://crm-f-eight.vercel.app"
+      ],
+      methods: ["GET", "POST"],
+      credentials: true
+    },
+    transports: ["websocket"]
+  });
+
+  io.on("connection", (socket) => {
+    console.log("Client connected:", socket.id);
+    socket.on("disconnect", () => {
+      console.log("Client disconnected:", socket.id);
+    });
+  });
 
   server.listen(PORT, () => {
     console.log(`SkyCRM backend listening on ${PORT}`);
