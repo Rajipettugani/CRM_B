@@ -6,6 +6,7 @@ import app from './app.js';
 import connectDB from './config/db.js';
 import { ensureDefaultAdmin } from './utils/setupDefaultUser.js';
 import { initSocket } from './serverSocket.js';
+import { Server } from 'socket.io';
 
 const PORT = process.env.PORT || 8000;
 
