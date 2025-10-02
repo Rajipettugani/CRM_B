@@ -19,7 +19,7 @@ const start = async () => {
   });
 
   app.use(cors({
-  origin: ['https://crm-f-eight.vercel.app/'], // replace with your actual Vercel URL
+  origin: ['https://crm-f-eight.vercel.app'], // replace with your actual Vercel URL
   credentials: true
 }));
 
