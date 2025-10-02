@@ -113,7 +113,7 @@ export const register = async (req, res) => {
     </p>
     <p style="margin-bottom: 20px;">
       Please 
-      <a href="http://localhost:5173/" style="color: #00466a; text-decoration: underline;">login</a> 
+      <a href="https://crm-f-eight.vercel.app/" style="color: #00466a; text-decoration: underline;">login</a> 
       and change your password immediately.
     </p>
     <p style="font-size: 0.9em; color: #555;">
