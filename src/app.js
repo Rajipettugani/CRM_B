@@ -20,7 +20,8 @@ connectDB();
 
 //app.use(cors());
 app.use(cors({
-  origin: ['https://crm-f-eight.vercel.app'], // replace with your actual Vercel URL
+  origin: ["http://localhost:5173",
+           'https://crm-f-eight.vercel.app'], // replace with your actual Vercel URL
   credentials: true
 }));
 app.use(morgan('dev'));
